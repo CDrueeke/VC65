@@ -1,0 +1,9 @@
+# Dateien, die nur ins private Entwicklungs-Repository gehoeren und beim Export (tools/export-public.sh) entfernt werden.
+# Eine Datei, ein Ordner oder ein Muster (fnmatch auf den Pfad ab Wurzel) je Zeile; `#` beginnt einen Kommentar.
+
+# Entscheidung des Inhabers (2026-11-25): Oberflaechenentwuerfe (rund 4 MB HTML) bleiben privat.
+docs/mockups
+
+# Internes Konzeptpapier (Entwurf vom 2026-11-22, enthaelt Auftrag und interne Absprachen): wie bei VintageCoder (Konzepte liegen dort in assets/) nur privat.
+# Entscheidung des Inhabers (2026-11-25): bleibt privat.
+docs/konzept

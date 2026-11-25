@@ -1,0 +1,17 @@
+Versionierte Kopien aus VintageCoder (nur gelesen, nie dort geaendert). Aktualisieren nur bewusst, mit Eintrag im CHANGELOG.
+Quelle: VintageCoder-dev, Integrationszweig claude/tauri-ui
+Commit: e4046d66224f0c18ddd846ccfa833e4ff2db9d4b
+vcc-Version: 0.2.1
+Kopiert am: 2026-11-22
+VCASM-Sprachversion: noch nicht gefuehrt (Sprachbeschreibung folgt von VintageCoder, Konzept Abschnitt 22)
+Dateien (SHA-256):
+df5c6aefdcdfd94947b0b84f24fdb8740d0613115dedcbbd049605ce8992d116  data/chars/petscii.json
+1b60f4b0657c4323118f08208faf5e9c9d9d739c065e8cecd520cd0984d5dfe8  data/cpus/45gs02.cpu.json
+56cf5dd2e9a771c8d4cc76c3f219b2d4df0468e92e9211de5ebf6d657034b753  help/asm-directives.md
+985bed98a028a1ed37bb593734fde6c6e161ad3461c61bed5711e8ce7e125269  help/asm-expr.md
+775f6e371eb36cf2d39dba0df70fed904ec18709e484a279008ffb82a30c7a5e  help/asm-index.md
+502090cc44cfc0ed2476c9924bc6595501eeb11e3e93d6075d07d03ade4440b1  help/asm-library.md
+c71bb2a96dea3a98385f2758b95d7d7c266e7467e4c804a1186d209aa8d86ce0  help/asm-macros.md
+a79a3e599b0c09869427b1dbd7d5b7e48a39421861c989c0192977d0c3fc993b  help/asm-text.md
+d59e739290bd8e1f77cce035ad5a5036845d526d5085637b1f4ef4d26819d63a  help/assembler.md
+Stand der Liste: 2026-11-25 (help/*.md und data/chars waren nach der ersten Kopie hinzugekommen, nur die CPU-Tabelle war bisher eingetragen).

@@ -1,0 +1,10 @@
+.org $c000
+        .byte 1
+*= $c010
+        .byte 2
+.org $c012
+        lda.z $12
+        lda.a $12
+        lda.z $12,x
+        lda.a $12,x
+        ldx.a $12,y

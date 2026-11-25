@@ -1,0 +1,1411 @@
+{
+ "_comment": "Erzeugt von tools/vcasm_status.py. status: heute | geplant (Stufe 2|3) | nie. Eintraege 'heute' koennen Abweichungen in 'detail' tragen; Stand der Pruefung: docs/entwickler/de/vcasm-konformitaet-luecken.md.",
+ "vc65_version": "0.1.0-alpha",
+ "directives": [
+  {
+   "name": ".org",
+   "status": "heute",
+   "group": "address"
+  },
+  {
+   "name": "*=",
+   "status": "heute",
+   "alias_of": ".org",
+   "group": "address"
+  },
+  {
+   "name": ".align",
+   "status": "heute",
+   "group": "address"
+  },
+  {
+   "name": ".page",
+   "status": "heute",
+   "alias_of": ".align",
+   "group": "address"
+  },
+  {
+   "name": ".relocate",
+   "status": "heute",
+   "group": "address"
+  },
+  {
+   "name": ".pseudopc",
+   "status": "heute",
+   "alias_of": ".relocate",
+   "group": "address"
+  },
+  {
+   "name": ".endrelocate",
+   "status": "heute",
+   "alias_of": ".relocate",
+   "group": "address"
+  },
+  {
+   "name": ".realpc",
+   "status": "heute",
+   "alias_of": ".relocate",
+   "group": "address"
+  },
+  {
+   "name": ".endpseudopc",
+   "status": "heute",
+   "alias_of": ".relocate",
+   "group": "address"
+  },
+  {
+   "name": ".bank",
+   "status": "heute",
+   "detail": "nur Bank 0; andere Bank: E901 (Format-Unterschied, keine Bankausgabe)",
+   "group": "segment"
+  },
+  {
+   "name": ".segment",
+   "status": "heute",
+   "detail": "Segmente; Ausgabe wie vcc, Besonderheiten siehe docs/entwickler/de/vcasm-konformitaet-luecken.md",
+   "group": "segment"
+  },
+  {
+   "name": ".cartridge",
+   "status": "nie",
+   "detail": "beim MEGA65 vorerst nicht benoetigt (E208)",
+   "group": "segment"
+  },
+  {
+   "name": ".byte",
+   "status": "heute",
+   "group": "data"
+  },
+  {
+   "name": ".db",
+   "status": "heute",
+   "alias_of": ".byte",
+   "group": "data"
+  },
+  {
+   "name": ".word",
+   "status": "heute",
+   "group": "data"
+  },
+  {
+   "name": ".dw",
+   "status": "heute",
+   "alias_of": ".word",
+   "group": "data"
+  },
+  {
+   "name": ".addr",
+   "status": "heute",
+   "alias_of": ".word",
+   "group": "data"
+  },
+  {
+   "name": ".dword",
+   "status": "heute",
+   "group": "data"
+  },
+  {
+   "name": ".long",
+   "status": "heute",
+   "alias_of": ".dword",
+   "group": "data"
+  },
+  {
+   "name": ".be16",
+   "status": "heute",
+   "group": "data"
+  },
+  {
+   "name": ".dbyt",
+   "status": "heute",
+   "alias_of": ".be16",
+   "group": "data"
+  },
+  {
+   "name": ".be32",
+   "status": "heute",
+   "group": "data"
+  },
+  {
+   "name": ".retaddr",
+   "status": "heute",
+   "group": "data"
+  },
+  {
+   "name": ".rta",
+   "status": "heute",
+   "alias_of": ".retaddr",
+   "group": "data"
+  },
+  {
+   "name": ".hex",
+   "status": "heute",
+   "group": "data"
+  },
+  {
+   "name": ".fill",
+   "status": "heute",
+   "group": "data"
+  },
+  {
+   "name": ".incbin",
+   "status": "heute",
+   "group": "data"
+  },
+  {
+   "name": ".lohitable",
+   "status": "heute",
+   "group": "data"
+  },
+  {
+   "name": ".lohifill",
+   "status": "heute",
+   "alias_of": ".lohitable",
+   "group": "data"
+  },
+  {
+   "name": ".text",
+   "status": "heute",
+   "group": "text"
+  },
+  {
+   "name": ".textnull",
+   "status": "heute",
+   "group": "text"
+  },
+  {
+   "name": ".null",
+   "status": "heute",
+   "alias_of": ".textnull",
+   "group": "text"
+  },
+  {
+   "name": ".textlen",
+   "status": "heute",
+   "group": "text"
+  },
+  {
+   "name": ".ptext",
+   "status": "heute",
+   "alias_of": ".textlen",
+   "group": "text"
+  },
+  {
+   "name": ".textshift",
+   "status": "heute",
+   "group": "text"
+  },
+  {
+   "name": ".shift",
+   "status": "heute",
+   "alias_of": ".textshift",
+   "group": "text"
+  },
+  {
+   "name": ".screencode",
+   "status": "heute",
+   "group": "text"
+  },
+  {
+   "name": ".screen",
+   "status": "heute",
+   "alias_of": ".screencode",
+   "group": "text"
+  },
+  {
+   "name": ".petscii",
+   "status": "heute",
+   "group": "text"
+  },
+  {
+   "name": ".atascii",
+   "status": "nie",
+   "detail": "Atari-only, in VC65 nicht gebraucht (E208)",
+   "group": "text"
+  },
+  {
+   "name": ".encoding",
+   "status": "heute",
+   "group": "text"
+  },
+  {
+   "name": ".const",
+   "status": "heute",
+   "group": "const"
+  },
+  {
+   "name": ".equ",
+   "status": "heute",
+   "alias_of": ".const",
+   "group": "const"
+  },
+  {
+   "name": "=",
+   "status": "heute",
+   "alias_of": ".const",
+   "group": "const"
+  },
+  {
+   "name": ".var",
+   "status": "heute",
+   "group": "var"
+  },
+  {
+   "name": ".set",
+   "status": "heute",
+   "group": "var"
+  },
+  {
+   "name": ".function",
+   "status": "heute",
+   "group": "function"
+  },
+  {
+   "name": ".if",
+   "status": "heute",
+   "group": "conditional"
+  },
+  {
+   "name": ".endif",
+   "status": "heute",
+   "alias_of": ".if",
+   "group": "conditional"
+  },
+  {
+   "name": ".ifdef",
+   "status": "heute",
+   "group": "conditional"
+  },
+  {
+   "name": ".endif",
+   "status": "heute",
+   "alias_of": ".ifdef",
+   "group": "conditional"
+  },
+  {
+   "name": ".ifndef",
+   "status": "heute",
+   "group": "conditional"
+  },
+  {
+   "name": ".endif",
+   "status": "heute",
+   "alias_of": ".ifndef",
+   "group": "conditional"
+  },
+  {
+   "name": ".elseif",
+   "status": "heute",
+   "group": "conditional"
+  },
+  {
+   "name": ".else",
+   "status": "heute",
+   "group": "conditional"
+  },
+  {
+   "name": ".repeat",
+   "status": "heute",
+   "group": "loop"
+  },
+  {
+   "name": ".endrepeat",
+   "status": "heute",
+   "alias_of": ".repeat",
+   "group": "loop"
+  },
+  {
+   "name": ".for",
+   "status": "heute",
+   "group": "loop"
+  },
+  {
+   "name": ".endfor",
+   "status": "heute",
+   "alias_of": ".for",
+   "group": "loop"
+  },
+  {
+   "name": ".next",
+   "status": "heute",
+   "alias_of": ".for",
+   "group": "loop"
+  },
+  {
+   "name": ".break",
+   "status": "heute",
+   "group": "loop"
+  },
+  {
+   "name": ".continue",
+   "status": "heute",
+   "group": "loop"
+  },
+  {
+   "name": ".macro",
+   "status": "heute",
+   "group": "macro"
+  },
+  {
+   "name": ".endmacro",
+   "status": "heute",
+   "alias_of": ".macro",
+   "group": "macro"
+  },
+  {
+   "name": ".exitmacro",
+   "status": "heute",
+   "group": "macro"
+  },
+  {
+   "name": ".struct",
+   "status": "heute",
+   "group": "struct"
+  },
+  {
+   "name": ".endstruct",
+   "status": "heute",
+   "alias_of": ".struct",
+   "group": "struct"
+  },
+  {
+   "name": ".enum",
+   "status": "heute",
+   "group": "struct"
+  },
+  {
+   "name": ".endenum",
+   "status": "heute",
+   "alias_of": ".enum",
+   "group": "struct"
+  },
+  {
+   "name": ".scope",
+   "status": "heute",
+   "group": "scope"
+  },
+  {
+   "name": "{",
+   "status": "heute",
+   "alias_of": ".scope",
+   "group": "scope"
+  },
+  {
+   "name": ".endscope",
+   "status": "heute",
+   "alias_of": ".scope",
+   "group": "scope"
+  },
+  {
+   "name": "}",
+   "status": "heute",
+   "alias_of": ".scope",
+   "group": "scope"
+  },
+  {
+   "name": ".namespace",
+   "status": "heute",
+   "group": "scope"
+  },
+  {
+   "name": ".endscope",
+   "status": "heute",
+   "alias_of": ".namespace",
+   "group": "scope"
+  },
+  {
+   "name": "}",
+   "status": "heute",
+   "alias_of": ".namespace",
+   "group": "scope"
+  },
+  {
+   "name": ".include",
+   "status": "heute",
+   "detail": "Systemdateien anderer Ziele fehlen (nur mega65, common, c64/hardware.asm)",
+   "group": "files"
+  },
+  {
+   "name": "#include",
+   "status": "heute",
+   "alias_of": ".include",
+   "group": "files"
+  },
+  {
+   "name": ".basicstub",
+   "status": "heute",
+   "group": "start"
+  },
+  {
+   "name": ".run",
+   "status": "heute",
+   "detail": "wird gelesen, ohne Wirkung (W206 wie vcc fuer mega65)",
+   "group": "start"
+  },
+  {
+   "name": ".assert",
+   "status": "heute",
+   "group": "check"
+  },
+  {
+   "name": ".error",
+   "status": "heute",
+   "group": "check"
+  },
+  {
+   "name": ".warning",
+   "status": "heute",
+   "group": "check"
+  },
+  {
+   "name": ".cycles",
+   "status": "heute",
+   "group": "cycles"
+  },
+  {
+   "name": ".endcycles",
+   "status": "heute",
+   "alias_of": ".cycles",
+   "group": "cycles"
+  },
+  {
+   "name": ".target",
+   "status": "heute",
+   "detail": "nur mega65; andere Ziele melden E207 (Entscheidung)",
+   "group": "target"
+  },
+  {
+   "name": ".cpu",
+   "status": "heute",
+   "detail": "Optionen werden gelesen und ignoriert",
+   "group": "target"
+  },
+  {
+   "name": ".branchlong",
+   "status": "heute",
+   "group": "branch"
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "adc",
+   "status": "heute"
+  },
+  {
+   "name": "adcq",
+   "status": "heute"
+  },
+  {
+   "name": "and",
+   "status": "heute"
+  },
+  {
+   "name": "andq",
+   "status": "heute"
+  },
+  {
+   "name": "asl",
+   "status": "heute"
+  },
+  {
+   "name": "aslq",
+   "status": "heute"
+  },
+  {
+   "name": "asr",
+   "status": "heute"
+  },
+  {
+   "name": "asrq",
+   "status": "heute"
+  },
+  {
+   "name": "asw",
+   "status": "heute"
+  },
+  {
+   "name": "bbr0",
+   "status": "heute"
+  },
+  {
+   "name": "bbr1",
+   "status": "heute"
+  },
+  {
+   "name": "bbr2",
+   "status": "heute"
+  },
+  {
+   "name": "bbr3",
+   "status": "heute"
+  },
+  {
+   "name": "bbr4",
+   "status": "heute"
+  },
+  {
+   "name": "bbr5",
+   "status": "heute"
+  },
+  {
+   "name": "bbr6",
+   "status": "heute"
+  },
+  {
+   "name": "bbr7",
+   "status": "heute"
+  },
+  {
+   "name": "bbs0",
+   "status": "heute"
+  },
+  {
+   "name": "bbs1",
+   "status": "heute"
+  },
+  {
+   "name": "bbs2",
+   "status": "heute"
+  },
+  {
+   "name": "bbs3",
+   "status": "heute"
+  },
+  {
+   "name": "bbs4",
+   "status": "heute"
+  },
+  {
+   "name": "bbs5",
+   "status": "heute"
+  },
+  {
+   "name": "bbs6",
+   "status": "heute"
+  },
+  {
+   "name": "bbs7",
+   "status": "heute"
+  },
+  {
+   "name": "bcc",
+   "status": "heute"
+  },
+  {
+   "name": "bcs",
+   "status": "heute"
+  },
+  {
+   "name": "beq",
+   "status": "heute"
+  },
+  {
+   "name": "bit",
+   "status": "heute"
+  },
+  {
+   "name": "bitq",
+   "status": "heute"
+  },
+  {
+   "name": "bmi",
+   "status": "heute"
+  },
+  {
+   "name": "bne",
+   "status": "heute"
+  },
+  {
+   "name": "bpl",
+   "status": "heute"
+  },
+  {
+   "name": "bra",
+   "status": "heute"
+  },
+  {
+   "name": "brk",
+   "status": "heute"
+  },
+  {
+   "name": "bsr",
+   "status": "heute"
+  },
+  {
+   "name": "bvc",
+   "status": "heute"
+  },
+  {
+   "name": "bvs",
+   "status": "heute"
+  },
+  {
+   "name": "clc",
+   "status": "heute"
+  },
+  {
+   "name": "cld",
+   "status": "heute"
+  },
+  {
+   "name": "cle",
+   "status": "heute"
+  },
+  {
+   "name": "cli",
+   "status": "heute"
+  },
+  {
+   "name": "clv",
+   "status": "heute"
+  },
+  {
+   "name": "cmp",
+   "status": "heute"
+  },
+  {
+   "name": "cpq",
+   "status": "heute"
+  },
+  {
+   "name": "cpx",
+   "status": "heute"
+  },
+  {
+   "name": "cpy",
+   "status": "heute"
+  },
+  {
+   "name": "cpz",
+   "status": "heute"
+  },
+  {
+   "name": "dec",
+   "status": "heute"
+  },
+  {
+   "name": "deq",
+   "status": "heute"
+  },
+  {
+   "name": "dew",
+   "status": "heute"
+  },
+  {
+   "name": "dex",
+   "status": "heute"
+  },
+  {
+   "name": "dey",
+   "status": "heute"
+  },
+  {
+   "name": "dez",
+   "status": "heute"
+  },
+  {
+   "name": "eom",
+   "status": "heute"
+  },
+  {
+   "name": "eor",
+   "status": "heute"
+  },
+  {
+   "name": "eorq",
+   "status": "heute"
+  },
+  {
+   "name": "inc",
+   "status": "heute"
+  },
+  {
+   "name": "inq",
+   "status": "heute"
+  },
+  {
+   "name": "inw",
+   "status": "heute"
+  },
+  {
+   "name": "inx",
+   "status": "heute"
+  },
+  {
+   "name": "iny",
+   "status": "heute"
+  },
+  {
+   "name": "inz",
+   "status": "heute"
+  },
+  {
+   "name": "jmp",
+   "status": "heute"
+  },
+  {
+   "name": "jsr",
+   "status": "heute"
+  },
+  {
+   "name": "lbcc",
+   "status": "heute"
+  },
+  {
+   "name": "lbcs",
+   "status": "heute"
+  },
+  {
+   "name": "lbeq",
+   "status": "heute"
+  },
+  {
+   "name": "lbmi",
+   "status": "heute"
+  },
+  {
+   "name": "lbne",
+   "status": "heute"
+  },
+  {
+   "name": "lbpl",
+   "status": "heute"
+  },
+  {
+   "name": "lbra",
+   "status": "heute"
+  },
+  {
+   "name": "lbvc",
+   "status": "heute"
+  },
+  {
+   "name": "lbvs",
+   "status": "heute"
+  },
+  {
+   "name": "lda",
+   "status": "heute"
+  },
+  {
+   "name": "ldq",
+   "status": "heute"
+  },
+  {
+   "name": "ldx",
+   "status": "heute"
+  },
+  {
+   "name": "ldy",
+   "status": "heute"
+  },
+  {
+   "name": "ldz",
+   "status": "heute"
+  },
+  {
+   "name": "lsr",
+   "status": "heute"
+  },
+  {
+   "name": "lsrq",
+   "status": "heute"
+  },
+  {
+   "name": "map",
+   "status": "heute"
+  },
+  {
+   "name": "neg",
+   "status": "heute"
+  },
+  {
+   "name": "negq",
+   "status": "heute"
+  },
+  {
+   "name": "ora",
+   "status": "heute"
+  },
+  {
+   "name": "orq",
+   "status": "heute"
+  },
+  {
+   "name": "pha",
+   "status": "heute"
+  },
+  {
+   "name": "php",
+   "status": "heute"
+  },
+  {
+   "name": "phw",
+   "status": "heute"
+  },
+  {
+   "name": "phx",
+   "status": "heute"
+  },
+  {
+   "name": "phy",
+   "status": "heute"
+  },
+  {
+   "name": "phz",
+   "status": "heute"
+  },
+  {
+   "name": "pla",
+   "status": "heute"
+  },
+  {
+   "name": "plp",
+   "status": "heute"
+  },
+  {
+   "name": "plx",
+   "status": "heute"
+  },
+  {
+   "name": "ply",
+   "status": "heute"
+  },
+  {
+   "name": "plz",
+   "status": "heute"
+  },
+  {
+   "name": "rmb0",
+   "status": "heute"
+  },
+  {
+   "name": "rmb1",
+   "status": "heute"
+  },
+  {
+   "name": "rmb2",
+   "status": "heute"
+  },
+  {
+   "name": "rmb3",
+   "status": "heute"
+  },
+  {
+   "name": "rmb4",
+   "status": "heute"
+  },
+  {
+   "name": "rmb5",
+   "status": "heute"
+  },
+  {
+   "name": "rmb6",
+   "status": "heute"
+  },
+  {
+   "name": "rmb7",
+   "status": "heute"
+  },
+  {
+   "name": "rol",
+   "status": "heute"
+  },
+  {
+   "name": "rolq",
+   "status": "heute"
+  },
+  {
+   "name": "ror",
+   "status": "heute"
+  },
+  {
+   "name": "rorq",
+   "status": "heute"
+  },
+  {
+   "name": "row",
+   "status": "heute"
+  },
+  {
+   "name": "rti",
+   "status": "heute"
+  },
+  {
+   "name": "rts",
+   "status": "heute"
+  },
+  {
+   "name": "sbc",
+   "status": "heute"
+  },
+  {
+   "name": "sbcq",
+   "status": "heute"
+  },
+  {
+   "name": "sec",
+   "status": "heute"
+  },
+  {
+   "name": "sed",
+   "status": "heute"
+  },
+  {
+   "name": "see",
+   "status": "heute"
+  },
+  {
+   "name": "sei",
+   "status": "heute"
+  },
+  {
+   "name": "smb0",
+   "status": "heute"
+  },
+  {
+   "name": "smb1",
+   "status": "heute"
+  },
+  {
+   "name": "smb2",
+   "status": "heute"
+  },
+  {
+   "name": "smb3",
+   "status": "heute"
+  },
+  {
+   "name": "smb4",
+   "status": "heute"
+  },
+  {
+   "name": "smb5",
+   "status": "heute"
+  },
+  {
+   "name": "smb6",
+   "status": "heute"
+  },
+  {
+   "name": "smb7",
+   "status": "heute"
+  },
+  {
+   "name": "sta",
+   "status": "heute"
+  },
+  {
+   "name": "stq",
+   "status": "heute"
+  },
+  {
+   "name": "stx",
+   "status": "heute"
+  },
+  {
+   "name": "sty",
+   "status": "heute"
+  },
+  {
+   "name": "stz",
+   "status": "heute"
+  },
+  {
+   "name": "tab",
+   "status": "heute"
+  },
+  {
+   "name": "tax",
+   "status": "heute"
+  },
+  {
+   "name": "tay",
+   "status": "heute"
+  },
+  {
+   "name": "taz",
+   "status": "heute"
+  },
+  {
+   "name": "tba",
+   "status": "heute"
+  },
+  {
+   "name": "trb",
+   "status": "heute"
+  },
+  {
+   "name": "tsb",
+   "status": "heute"
+  },
+  {
+   "name": "tsx",
+   "status": "heute"
+  },
+  {
+   "name": "tsy",
+   "status": "heute"
+  },
+  {
+   "name": "txa",
+   "status": "heute"
+  },
+  {
+   "name": "txs",
+   "status": "heute"
+  },
+  {
+   "name": "tya",
+   "status": "heute"
+  },
+  {
+   "name": "tys",
+   "status": "heute"
+  },
+  {
+   "name": "tza",
+   "status": "heute"
+  }
+ ],
+ "functions": [
+  {
+   "name": "abs",
+   "status": "heute"
+  },
+  {
+   "name": "acos",
+   "status": "heute"
+  },
+  {
+   "name": "align",
+   "status": "heute"
+  },
+  {
+   "name": "asin",
+   "status": "heute"
+  },
+  {
+   "name": "atan",
+   "status": "heute"
+  },
+  {
+   "name": "atan2",
+   "status": "heute"
+  },
+  {
+   "name": "ceil",
+   "status": "heute"
+  },
+  {
+   "name": "cos",
+   "status": "heute"
+  },
+  {
+   "name": "exp",
+   "status": "heute"
+  },
+  {
+   "name": "floor",
+   "status": "heute"
+  },
+  {
+   "name": "int",
+   "status": "heute"
+  },
+  {
+   "name": "len",
+   "status": "heute"
+  },
+  {
+   "name": "log",
+   "status": "heute"
+  },
+  {
+   "name": "log10",
+   "status": "heute"
+  },
+  {
+   "name": "log2",
+   "status": "heute"
+  },
+  {
+   "name": "max",
+   "status": "heute"
+  },
+  {
+   "name": "min",
+   "status": "heute"
+  },
+  {
+   "name": "next",
+   "status": "heute"
+  },
+  {
+   "name": "pow",
+   "status": "heute"
+  },
+  {
+   "name": "range",
+   "status": "heute"
+  },
+  {
+   "name": "round",
+   "status": "heute"
+  },
+  {
+   "name": "sign",
+   "status": "heute"
+  },
+  {
+   "name": "sin",
+   "status": "heute"
+  },
+  {
+   "name": "sqrt",
+   "status": "heute"
+  },
+  {
+   "name": "tan",
+   "status": "heute"
+  }
+ ],
+ "constants": [
+  {
+   "name": "pi",
+   "status": "heute"
+  }
+ ],
+ "operators": [
+  {
+   "name": "+",
+   "status": "heute"
+  },
+  {
+   "name": "-",
+   "status": "heute"
+  },
+  {
+   "name": "*",
+   "status": "heute"
+  },
+  {
+   "name": "/",
+   "status": "heute"
+  },
+  {
+   "name": "%",
+   "status": "heute"
+  },
+  {
+   "name": "<<",
+   "status": "heute"
+  },
+  {
+   "name": ">>",
+   "status": "heute"
+  },
+  {
+   "name": "&",
+   "status": "heute"
+  },
+  {
+   "name": "^",
+   "status": "heute"
+  },
+  {
+   "name": "|",
+   "status": "heute"
+  },
+  {
+   "name": "!",
+   "status": "heute"
+  },
+  {
+   "name": "~",
+   "status": "heute"
+  },
+  {
+   "name": "<",
+   "status": "heute"
+  },
+  {
+   "name": ">",
+   "status": "heute"
+  },
+  {
+   "name": "<=",
+   "status": "heute"
+  },
+  {
+   "name": ">=",
+   "status": "heute"
+  },
+  {
+   "name": "==",
+   "status": "heute"
+  },
+  {
+   "name": "!=",
+   "status": "heute"
+  },
+  {
+   "name": "&&",
+   "status": "heute"
+  },
+  {
+   "name": "||",
+   "status": "heute"
+  }
+ ],
+ "libraries": [
+  {
+   "name": "atari8bit/antic.asm",
+   "status": "nie",
+   "detail": "Systemdatei eines anderen Ziels (mega65-only)"
+  },
+  {
+   "name": "atari8bit/gtia.asm",
+   "status": "nie",
+   "detail": "Systemdatei eines anderen Ziels (mega65-only)"
+  },
+  {
+   "name": "atari8bit/notes.inc",
+   "status": "nie",
+   "detail": "Systemdatei eines anderen Ziels (mega65-only)"
+  },
+  {
+   "name": "atari8bit/os.asm",
+   "status": "nie",
+   "detail": "Systemdatei eines anderen Ziels (mega65-only)"
+  },
+  {
+   "name": "atari8bit/tiles.asm",
+   "status": "nie",
+   "detail": "Systemdatei eines anderen Ziels (mega65-only)"
+  },
+  {
+   "name": "c128/hardware.asm",
+   "status": "nie",
+   "detail": "Systemdatei eines anderen Ziels (mega65-only)"
+  },
+  {
+   "name": "c128/kernal.asm",
+   "status": "nie",
+   "detail": "Systemdatei eines anderen Ziels (mega65-only)"
+  },
+  {
+   "name": "c128/notes.inc",
+   "status": "nie",
+   "detail": "Systemdatei eines anderen Ziels (mega65-only)"
+  },
+  {
+   "name": "c128/tiles.asm",
+   "status": "nie",
+   "detail": "Systemdatei eines anderen Ziels (mega65-only)"
+  },
+  {
+   "name": "c64/basic.asm",
+   "status": "nie",
+   "detail": "Systemdatei eines anderen Ziels (mega65-only)"
+  },
+  {
+   "name": "c64/hardware.asm",
+   "status": "heute"
+  },
+  {
+   "name": "c64/kernal.asm",
+   "status": "nie",
+   "detail": "Systemdatei eines anderen Ziels (mega65-only)"
+  },
+  {
+   "name": "c64/notes.inc",
+   "status": "nie",
+   "detail": "Systemdatei eines anderen Ziels (mega65-only)"
+  },
+  {
+   "name": "c64/tiles.asm",
+   "status": "nie",
+   "detail": "Systemdatei eines anderen Ziels (mega65-only)"
+  },
+  {
+   "name": "common/math.asm",
+   "status": "heute"
+  },
+  {
+   "name": "common/tiles.asm",
+   "status": "heute"
+  },
+  {
+   "name": "common/types.asm",
+   "status": "heute"
+  },
+  {
+   "name": "mega65/gs4502.asm",
+   "status": "heute"
+  },
+  {
+   "name": "mega65/hardware.asm",
+   "status": "heute"
+  },
+  {
+   "name": "mega65/kernal.asm",
+   "status": "heute"
+  },
+  {
+   "name": "mega65/notes.inc",
+   "status": "heute"
+  },
+  {
+   "name": "mega65/rom_920418.asm",
+   "status": "heute"
+  },
+  {
+   "name": "mega65/rom_open.asm",
+   "status": "heute"
+  },
+  {
+   "name": "mega65/tiles.asm",
+   "status": "heute"
+  },
+  {
+   "name": "mega65/vic4.asm",
+   "status": "heute"
+  },
+  {
+   "name": "plus4/hardware.asm",
+   "status": "nie",
+   "detail": "Systemdatei eines anderen Ziels (mega65-only)"
+  },
+  {
+   "name": "plus4/kernal.asm",
+   "status": "nie",
+   "detail": "Systemdatei eines anderen Ziels (mega65-only)"
+  },
+  {
+   "name": "plus4/notes.inc",
+   "status": "nie",
+   "detail": "Systemdatei eines anderen Ziels (mega65-only)"
+  },
+  {
+   "name": "plus4/tiles.asm",
+   "status": "nie",
+   "detail": "Systemdatei eines anderen Ziels (mega65-only)"
+  },
+  {
+   "name": "vcs2600/tia.asm",
+   "status": "nie",
+   "detail": "Systemdatei eines anderen Ziels (mega65-only)"
+  },
+  {
+   "name": "vic20/notes.inc",
+   "status": "nie",
+   "detail": "Systemdatei eines anderen Ziels (mega65-only)"
+  },
+  {
+   "name": "vic20/tiles.asm",
+   "status": "nie",
+   "detail": "Systemdatei eines anderen Ziels (mega65-only)"
+  }
+ ]
+}

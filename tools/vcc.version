@@ -1,0 +1,5 @@
+# Fester vcc-Stand fuer den Bau von VC65 (Stand der Hauptsession, Integrationszweig claude/tauri-ui)
+VCC_COMMIT=2caec744
+VCC_VERSION=0.2.1
+VCC_SHA256_MAC_ARM64=c6abaa776abd25769e523787205b2530e4087840c7622e6f93750e9780fef55c
+VCC_SHA256_WINDOWS=(fuer 2caec744 noch nicht bereitgestellt; vorher 0ac9156bb45846758851b0c38b3da289fe8b2613344688abc14a020fc0fb5777 fuer 222113b4)

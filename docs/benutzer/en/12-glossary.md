@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: MIT-0 -->
 # 12 Glossary
 
-German version: [../de/12-glossar.md](../de/12-glossar.md). Back to the [overview](README.md). Prerelease 0.1.0-Alpha.
+German version: [../de/12-glossar.md](../de/12-glossar.md). Back to the [overview](README.md). Prerelease 0.1.1-Alpha.
 
 Terms used in the manual, in alphabetical order.
 

@@ -1,6 +1,6 @@
 {
  "_comment": "Erzeugt von tools/vcasm_status.py. status: heute | geplant (Stufe 2|3) | nie. Eintraege 'heute' koennen Abweichungen in 'detail' tragen; Stand der Pruefung: docs/entwickler/de/vcasm-konformitaet-luecken.md.",
- "vc65_version": "0.1.0-alpha",
+ "vc65_version": "0.1.1-alpha",
  "directives": [
   {
    "name": ".org",

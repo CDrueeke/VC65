@@ -1,9 +1,9 @@
 <!-- SPDX-License-Identifier: MIT-0 -->
 # 9 Die Beispielprogramme
 
-Englische Fassung: [../en/09-examples.md](../en/09-examples.md). Zurück zur [Übersicht](README.md). Vorabversion 0.1.0-Alpha.
+Englische Fassung: [../en/09-examples.md](../en/09-examples.md). Zurück zur [Übersicht](README.md). Vorabversion 0.1.1-Alpha.
 
-Die Beispiel-D81 (`VC65-Beispiele-0.1.0-alpha.d81`) enthält vier MEGA65-Programme aus VintageCoder als Quelltext. Sie stehen unter der Lizenz MIT-0: Sie dürfen sie ohne Auflagen verwenden, ändern und weitergeben. Jede Hauptdatei beginnt mit einem ausführlichen Kopfkommentar (Was das Programm zeigt, Bedienung, Hardware, Speicher). Lesen Sie ihn zuerst.
+Die Beispiel-D81 (`VC65-Beispiele-0.1.1-alpha.d81`) enthält vier MEGA65-Programme aus VintageCoder als Quelltext. Sie stehen unter der Lizenz MIT-0: Sie dürfen sie ohne Auflagen verwenden, ändern und weitergeben. Jede Hauptdatei beginnt mit einem ausführlichen Kopfkommentar (Was das Programm zeigt, Bedienung, Hardware, Speicher). Lesen Sie ihn zuerst.
 
 > **Hinweis:** Übersetzen in VC65 liefert dieselben Bytes wie `vcc`; das Starten ist nur im Emulator Xemu geprüft, nicht am echten MEGA65.
 

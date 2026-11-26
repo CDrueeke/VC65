@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: MIT-0 -->
 # 6 Projekte und Dateien
 
-Englische Fassung: [../en/06-projects-and-files.md](../en/06-projects-and-files.md). Zurück zur [Übersicht](README.md). Vorabversion 0.1.0-Alpha.
+Englische Fassung: [../en/06-projects-and-files.md](../en/06-projects-and-files.md). Zurück zur [Übersicht](README.md). Vorabversion 0.1.1-Alpha.
 
 > **Hinweis:** Die Arbeit mit zwei D81 und die Umschaltung der Laufwerke mit Strg+A sind nur im Emulator Xemu getestet (Systemdisk in Laufwerk 8, Projektdisk in Laufwerk 9), am echten MEGA65 ungeprüft. Das gilt auch für das Einlegen zweier Abbilder und die Geräteumschaltung des KERNAL.
 
@@ -31,7 +31,7 @@ Eigene Dateien, die Sie mit `.include "datei"` einbinden, gehören auf das **Pro
 
 Diese Version arbeitet mit **einer** Datei im Editor und ohne Projektdatei. Der Quelltext kann weitere Dateien mit `.include` einbinden; sie werden bei jedem Übersetzen von der Diskette gelesen.
 
-![Ein Beispielprojekt (jumprun) im Editor, volle Bildhöhe.](../../screenshots/vc65-projekt-50.png)
+![Ein Beispielprojekt (prallball) im Editor, volle Bildhöhe.](../../screenshots/vc65-projekt-50.png)
 
 ## Beispiele
 

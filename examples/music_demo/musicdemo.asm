@@ -26,7 +26,6 @@
 ;   Programm und Spielroutine ab $2000 (ca. 2,4 KB mit den Songdaten); Zeropage $F7-$FA (Zeiger der Spielroutine); sonst nichts.
 ;   Das Programm läuft ohne KERNAL-Unterbrechungen (SEI) und kehrt nie zurück.
 ; =====================================================================================================================
-.cpu 45gs02 { illegals = deny }
 
 .org $2000
 .include "sidmusic.inc"            ; definiert nur Konstanten und Makros, erzeugt hier noch keine Bytes

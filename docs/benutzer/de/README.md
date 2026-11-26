@@ -3,7 +3,7 @@
 
 Englische Fassung: [../en/README.md](../en/README.md). Beide Fassungen tragen denselben Kapitelaufbau und denselben Inhalt.
 
-**Stand: Vorabversion 0.1.0-Alpha (noch nicht veröffentlicht).** VC65 ist im Alpha-Stadium. Alles ist bisher im Emulator Xemu getestet, nichts davon am echten MEGA65; die einzelnen Kapitel kennzeichnen, was besonders offen ist. Tastenbelegungen sind vorläufig. Beginnen Sie mit [Kapitel 1](01-einstieg.md), dort steht auch der Abschnitt „Stand und Grenzen“.
+**Stand: Vorabversion 0.1.1-Alpha.** VC65 ist im Alpha-Stadium. Alles ist bisher im Emulator Xemu getestet, nichts davon am echten MEGA65; die einzelnen Kapitel kennzeichnen, was besonders offen ist. Tastenbelegungen sind vorläufig. Beginnen Sie mit [Kapitel 1](01-einstieg.md), dort steht auch der Abschnitt „Stand und Grenzen“.
 
 | Kapitel | Inhalt | Stand |
 |---|---|---|

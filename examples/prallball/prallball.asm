@@ -95,7 +95,6 @@
 ;   In 640 x 400 zaehlen die Sprite-Koordinaten echte Bildpunkte (SPRH640/SPRENV400, update_sprites_h): X' = 2 * px + 79, Y' = 2 * py + 107
 ;   (die 12 Punkte breite Kugel liegt 2 Punkte eingerueckt in ihrer 16 x 16 Punkte grossen Flaeche, daher dort 77 bzw. 105).
 ; =====================================================================================================================
-.cpu 45gs02 { illegals = deny }
 .branchlong auto                        ; zu weite bedingte Spruenge verlaengert der Assembler selbst (Warnung W203)
 
 ; ---------------------------------------------------------------------------------------------------------------------

@@ -104,7 +104,18 @@ iau_n:  clc
 ; ide_asm (Strg+E): Editortext uebersetzen. Eingabe: Editortext (ed_*), Laufwerke ed_fdev/ed_sdev. Ausgabe: Meldung in dz_mbuf,
 ; ed_olen/ed_ldadr, Probleme-Leiste und Fehlerzeilen (ide_plist). Aendert alle Register und E0-E2.
 ide_asm:
-        lda hp                      ; Stand des Editortexts merken (Haltepunkte nur bei gleichem Stand)
+        lda hp                      ; Text seit dem letzten Uebersetzen geaendert? Dann sind die Adressen der Haltepunkte ungueltig (ein BRK
+        cmp ide_ahp                 ; laege mitten in einem Befehl): alle Haltepunkte des Benutzers loeschen
+        bne ia_clr
+        lda hp + 1
+        cmp ide_ahp + 1
+        beq ia_hp
+ia_clr: ldx #BPMAX * 4 - 1
+        lda #$00
+ia_cl:  sta dbg_bp,x
+        dex
+        bpl ia_cl
+ia_hp:  lda hp                      ; Stand des Editortexts merken (Haltepunkte nur bei gleichem Stand)
         sta ide_ahp
         lda hp + 1
         sta ide_ahp + 1

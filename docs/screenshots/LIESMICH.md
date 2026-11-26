@@ -1,16 +1,16 @@
 <!-- SPDX-License-Identifier: MIT-0 -->
 # Bildschirmfotos
 
-Stand 2026-11-25. Echte Aufnahmen der IDE, laufend **in Xemu** (nicht am echten MEGA65), 800 × 625 Pixel, 50-Zeilen-Bild (80 × 50, VIC-IV V400, so startet die IDE auf dem Gerät), englische Texte des Programms, Farbschema der IDE. Erzeugt mit `tools/screens.py --50 [Ordner]` (Xemu speichert mit `-screenshot` beim Beenden ein PNG; die Szenen laufen aus Tastenskripten, `SCENES=about,fehler` wählt einzelne Szenen). Die Beispielquelle ist ein kleines Programm, das die Rahmenfarbe durchläuft.
+Stand 2026-11-26 (0.1.1-alpha). Echte Aufnahmen der IDE aus dem Emulator **Xemu** (nicht vom echten MEGA65), 640 × 400 Pixel (der Bildschirm ohne PAL-Rand), 50-Zeilen-Bild (80 × 50), englische Texte des Programms, Farbschema der IDE. Sie wurden mit der veröffentlichten Boot-Diskette aufgenommen (Quelle `hello.asm` und `prallball.asm` von der Beispiel-Diskette); nur das About-Bild entstand mit `tools/screens.py --50` (Szene `about`, Ausschnitt 640 × 400 ab Pixel 80/104), weil der Fehler im Startbild mit geladener Datei erst in 0.1.1-alpha behoben ist.
 
-> **Ist-Stand, nicht Zielbild.** Diese Aufnahmen zeigen die IDE, wie sie heute läuft (Befehlsleiste, Dateizeile, Probleme-Leiste, Menüs mit Aufklappfeldern). Das geplante Aussehen zeigen die Entwürfe in `../mockups/` (Entwurf, noch nicht gebaut). Beides muss in der Außendarstellung getrennt beschriftet werden: „heutiger Stand (Xemu)“ und „Entwurf“.
+> **Ist-Stand, nicht Zielbild.** Die Aufnahmen zeigen die IDE, wie sie heute läuft. Das geplante Aussehen zeigen die Entwürfe in `../mockups/` (privat, nicht Teil der öffentlichen Fassung). In der Außendarstellung beides getrennt beschriften: „heutiger Stand (Xemu)“ und „Entwurf“.
 
 | Datei | Szene |
 |---|---|
-| `vc65-editor-50.png` | Editor mit Färbung (Kommentar, Direktiven, Mnemonik, Zahlen, Marken), Zeilennummern, Dateizeile, Probleme-Leiste, Statuszeile |
-| `vc65-uebersetzen-50.png` | Strg+E: „OK 21 bytes“ in der Statuszeile |
-| `vc65-fehler-50.png` | Fehler: „E205 line 9 col 13“ in Probleme-Leiste und Statuszeile, der Cursor springt in die Zeile |
-| `vc65-menue-50.png` | geöffnetes Menü (Edit) |
-| `vc65-about-50.png` | Startbild und File > About VC65: Logo als Blockbild, Version |
-| `vc65-projekt-50.png` | die ersten 46 Zeilen des Beispiels `jumprun`, volle Bildhöhe (falls vorhanden) |
-| `vc65-debugger.png` | Debugger: Register, Flags, Disassemblierung, Quelltextzeile, Stapel, Speicher (PC `$2013`) |
+| `vc65-editor-50.png` | Editor mit Färbung, Zeilennummern, Dateizeile, Probleme-Leiste, Statuszeile |
+| `vc65-uebersetzen-50.png` | Strg+E: Erfolgsmeldung in der Statuszeile |
+| `vc65-fehler-50.png` | Fehler (E205, Zeile 34): Probleme-Leiste und Statuszeile, der Cursor springt in die Zeile |
+| `vc65-menue-50.png` | geöffnetes Menü |
+| `vc65-about-50.png` | File > About VC65: Logo als Blockbild, Version (Text dahinter abgedunkelt) |
+| `vc65-projekt-50.png` | Beispiel `prallball`, volle Bildhöhe |
+| `vc65-debugger.png` | Debugger: Register, Flags, Disassemblierung, Quelltextzeile, Stapel, Speicher |

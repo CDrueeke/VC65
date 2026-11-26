@@ -25,7 +25,6 @@
 ; Speicher
 ;   Programm ab $2000 (ca. 870 Byte mit den drei Tabellen zu je 256 Byte); Zeropage $F7-$FA (Quell- und Zielzeiger beim Kopieren).
 ; =====================================================================================================================
-.cpu 45gs02 { illegals = deny }
 
 .org $2000
 .include "vic4.inc"                 ; definiert nur Makros, erzeugt hier noch keine Bytes

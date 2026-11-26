@@ -24,7 +24,6 @@
 ;   ($10000-$107FF); nach dem Beispiel nicht in BASIC weiterarbeiten, ohne den Rechner zurückzusetzen.
 ;   Bibliothek: <mega65/gs4502.asm> (Makro mega65_enable_vic4; bindet <mega65/hardware.asm> mit den Registernamen ein).
 ; =====================================================================================================================
-.cpu 45gs02 { illegals = deny }
 #include <mega65/gs4502.asm>   // Makro mega65_enable_vic4
 
 .org $2001                          ; BASIC-65 lädt Programme ab $2001

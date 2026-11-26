@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: MIT-0 -->
 # Handtest im Emulator Xemu
 
-Vor der Vorabversion 0.1.0-Alpha prüft der Inhaber die IDE von Hand im Emulator Xemu (Mac). Das ersetzt **nicht** den Test am echten MEGA65 ([handtest.md](handtest.md)).
+Vor der Vorabversion 0.1.1-Alpha prüft der Inhaber die IDE von Hand im Emulator Xemu (Mac). Das ersetzt **nicht** den Test am echten MEGA65 ([handtest.md](handtest.md)).
 
 ## Vorbereitung
 ```bash

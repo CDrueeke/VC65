@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: MIT-0 -->
 # 5 Debugger
 
-Englische Fassung: [../en/05-debugger.md](../en/05-debugger.md). Zurück zur [Übersicht](README.md). Vorabversion 0.1.0-Alpha.
+Englische Fassung: [../en/05-debugger.md](../en/05-debugger.md). Zurück zur [Übersicht](README.md). Vorabversion 0.1.1-Alpha.
 
 > **Hinweis:** Der Debugger ist nur im Emulator Xemu getestet. Die Wege über `BRK` und KERNAL, die Tasten, die Bildschirmumschaltung und die Notfalltaste sind am echten Gerät ungeprüft. Die Tasten sind vorläufig.
 

@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: MIT-0 -->
 # 12 Glossar
 
-Englische Fassung: [../en/12-glossary.md](../en/12-glossary.md). Zurück zur [Übersicht](README.md). Vorabversion 0.1.0-Alpha.
+Englische Fassung: [../en/12-glossary.md](../en/12-glossary.md). Zurück zur [Übersicht](README.md). Vorabversion 0.1.1-Alpha.
 
 Begriffe, die im Handbuch vorkommen, in alphabetischer Reihenfolge.
 

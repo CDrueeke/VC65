@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: MIT-0 -->
 # 4 Bauen und Starten
 
-Englische Fassung: [../en/04-build-and-run.md](../en/04-build-and-run.md). Zurück zur [Übersicht](README.md). Vorabversion 0.1.0-Alpha.
+Englische Fassung: [../en/04-build-and-run.md](../en/04-build-and-run.md). Zurück zur [Übersicht](README.md). Vorabversion 0.1.1-Alpha.
 
 > **Hinweis:** Bauen, Starten und die Notfalltaste sind nur im Emulator Xemu getestet, am echten Gerät ungeprüft. Das gilt besonders für die automatische Prüfung, das 50-Zeilen-Bild und die RESTORE-Taste.
 

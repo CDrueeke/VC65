@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: MIT-0 -->
 # 11 Error and warning codes
 
-German version: [../de/11-fehlercodes.md](../de/11-fehlercodes.md). Back to the [overview](README.md). Prerelease 0.1.0-Alpha.
+German version: [../de/11-fehlercodes.md](../de/11-fehlercodes.md). Back to the [overview](README.md). Prerelease 0.1.1-Alpha.
 
 The assembler of VC65 reports errors as `Ennn` and warnings as `Wnnn`, each with line and column. **Errors** abort the build (the output is then not usable), **warnings** do not. The codes are the same as in `vcc`, the assembler of VintageCoder; VC65 adds its own codes for its limits (range 9xx). Errors appear red in the problems bar, warnings yellow; the status line names the first error (for example `E205 line 9 col 13`).
 

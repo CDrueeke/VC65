@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: MIT-0 -->
 # 8 Anleitung: Ihr erstes Programm
 
-Englische Fassung: [../en/08-first-program.md](../en/08-first-program.md). Zurück zur [Übersicht](README.md). Vorabversion 0.1.0-Alpha.
+Englische Fassung: [../en/08-first-program.md](../en/08-first-program.md). Zurück zur [Übersicht](README.md). Vorabversion 0.1.1-Alpha.
 
 Dieses Kapitel führt Schritt für Schritt vom Start von VC65 bis zu einem laufenden Programm, das Sie selbst eingetippt, übersetzt, gestartet und im Debugger angeschaut haben. Sie brauchen dafür nur die beiden Disketten des Pakets (Boot-D81 und Beispiel-D81) und einen MEGA65 oder den Emulator Xemu. Die Einzelheiten zu jedem Schritt stehen in den Kapiteln 1 bis 7; hier geht es um den Ablauf.
 
@@ -17,7 +17,7 @@ Das Programm schreibt den Gruß `HELLO FROM VC65!` auf den Bildschirm und wartet
 
 ## Schritt 1: VC65 starten
 
-1. Legen Sie die Boot-D81 (`VC65-0.1.0-alpha.d81`) als **Laufwerk 8** und die Beispiel-D81 als **Laufwerk 9** ein. Im Emulator Xemu hängen Sie beide Abbilder an die beiden Laufwerke an.
+1. Legen Sie die Boot-D81 (`VC65-0.1.1-alpha.d81`) als **Laufwerk 8** und die Beispiel-D81 als **Laufwerk 9** ein. Im Emulator Xemu hängen Sie beide Abbilder an die beiden Laufwerke an.
 2. Tippen Sie in BASIC `DLOAD"VC65"` und danach `RUN`. VC65 kopiert sich in einen eigenen Speicherbereich (Bank 4) und zeigt das Startbild mit dem Logo.
 3. Eine beliebige Taste führt in den Editor. Er zeigt 80 × 50 Zeichen; oben steht die Befehlsleiste, unten die Dateizeile, die Probleme-Leiste und die Statuszeile ([Kapitel 2](02-editor.md)).
 
@@ -33,7 +33,6 @@ Tippen Sie den folgenden Text in den leeren Editor. Groß- und Kleinschreibung s
 
 ```asm
 ; greet.asm - prints a greeting and waits for a key
-.cpu 45gs02
 #include <mega65/kernal.asm>
 
 .org $2001
@@ -58,7 +57,6 @@ Was die Zeilen bedeuten:
 
 | Zeile | Bedeutung |
 |---|---|
-| `.cpu 45gs02` | Befehlssatz des MEGA65 (VC65 kennt nur dieses Ziel) |
 | `#include <mega65/kernal.asm>` | Systemdatei mit den Namen der KERNAL-Sprungtabelle (`CHROUT`, `GETIN`, …); sie wird von der Boot-D81 gelesen |
 | `.org $2001` | Das Programm beginnt bei `$2001`, dem Anfang des BASIC-65-Speichers |
 | `.basicstub start` | erzeugt die BASIC-Zeile `10 SYS <Adresse von start>` |
@@ -78,7 +76,7 @@ Drücken Sie **Strg+E**. Bei Erfolg meldet die Statuszeile `OK n bytes` (n = Gr�
 
 ![Nach Strg+E: Erfolgsmeldung in der Statuszeile.](../../screenshots/vc65-uebersetzen-50.png)
 
-Bei einem Tippfehler meldet die Statuszeile den ersten Fehler, zum Beispiel `E205 line 9 col 13`, und der Cursor springt in die Zeile. Die Probleme-Leiste nennt bis zu drei Einträge. Was die Codes bedeuten, steht in [Kapitel 11](11-fehlercodes.md). Probieren Sie es aus: Ändern Sie `lda` zu `lad`, drücken Sie Strg+E, und beobachten Sie die rote Zeile. Ändern Sie es zurück.
+Bei einem Tippfehler meldet die Statuszeile den ersten Fehler, zum Beispiel `E205 line 8 col 13`, und der Cursor springt in die Zeile. Die Probleme-Leiste nennt bis zu drei Einträge. Was die Codes bedeuten, steht in [Kapitel 11](11-fehlercodes.md). Probieren Sie es aus: Ändern Sie `lda` zu `lad`, drücken Sie Strg+E, und beobachten Sie die rote Zeile. Ändern Sie es zurück.
 
 ## Schritt 5: Starten
 

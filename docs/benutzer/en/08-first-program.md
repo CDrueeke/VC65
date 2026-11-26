@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: MIT-0 -->
 # 8 Tutorial: your first program
 
-German version: [../de/08-erstes-programm.md](../de/08-erstes-programm.md). Back to the [overview](README.md). Prerelease 0.1.0-Alpha.
+German version: [../de/08-erstes-programm.md](../de/08-erstes-programm.md). Back to the [overview](README.md). Prerelease 0.1.1-Alpha.
 
 This chapter leads step by step from starting VC65 to a running program that you typed, assembled, started and looked at in the debugger yourself. You only need the two disks of the package (boot D81 and examples D81) and a MEGA65 or the Xemu emulator. The details of each step are in chapters 1 to 7; this chapter is about the workflow.
 
@@ -17,7 +17,7 @@ The program writes the greeting `HELLO FROM VC65!` on the screen and waits for a
 
 ## Step 1: start VC65
 
-1. Insert the boot D81 (`VC65-0.1.0-alpha.d81`) as **drive 8** and the examples D81 as **drive 9**. In the Xemu emulator, attach both images to the two drives.
+1. Insert the boot D81 (`VC65-0.1.1-alpha.d81`) as **drive 8** and the examples D81 as **drive 9**. In the Xemu emulator, attach both images to the two drives.
 2. In BASIC, type `DLOAD"VC65"` and then `RUN`. VC65 copies itself into its own memory area (bank 4) and shows the start screen with the logo.
 3. Any key leads to the editor. It shows 80 × 50 characters; at the top is the command bar, at the bottom the file line, the problems bar and the status line ([chapter 2](02-editor.md)).
 
@@ -33,7 +33,6 @@ Type the following text into the empty editor. Upper and lower case do not matte
 
 ```asm
 ; greet.asm - prints a greeting and waits for a key
-.cpu 45gs02
 #include <mega65/kernal.asm>
 
 .org $2001
@@ -58,7 +57,6 @@ What the lines mean:
 
 | Line | Meaning |
 |---|---|
-| `.cpu 45gs02` | instruction set of the MEGA65 (VC65 knows only this target) |
 | `#include <mega65/kernal.asm>` | system file with the names of the KERNAL jump table (`CHROUT`, `GETIN`, …); it is read from the boot D81 |
 | `.org $2001` | the program starts at `$2001`, the beginning of BASIC 65 memory |
 | `.basicstub start` | creates the BASIC line `10 SYS <address of start>` |
@@ -78,7 +76,7 @@ Press **Ctrl+E**. On success the status line reports `OK n bytes` (n = size of t
 
 ![After Ctrl+E: success message in the status line.](../../screenshots/vc65-uebersetzen-50.png)
 
-If you made a typing mistake, the status line reports the first error, for example `E205 line 9 col 13`, and the cursor jumps to the line. The problems bar lists up to three entries. What the codes mean is in [chapter 11](11-error-codes.md). Try it: change `lda` to `lad`, press Ctrl+E, and watch the red line. Change it back.
+If you made a typing mistake, the status line reports the first error, for example `E205 line 8 col 13`, and the cursor jumps to the line. The problems bar lists up to three entries. What the codes mean is in [chapter 11](11-error-codes.md). Try it: change `lda` to `lad`, press Ctrl+E, and watch the red line. Change it back.
 
 ## Step 5: run
 

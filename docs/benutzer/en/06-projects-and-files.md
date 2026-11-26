@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: MIT-0 -->
 # 6 Projects and files
 
-German version: [../de/06-projekte-und-dateien.md](../de/06-projekte-und-dateien.md). Back to the [overview](README.md). Prerelease 0.1.0-Alpha.
+German version: [../de/06-projekte-und-dateien.md](../de/06-projekte-und-dateien.md). Back to the [overview](README.md). Prerelease 0.1.1-Alpha.
 
 > **Note:** Working with two D81 and switching the drives with Ctrl+A are tested only in the Xemu emulator (system disk in drive 8, project disk in drive 9), unchecked on a real MEGA65. This also applies to inserting two images and the KERNAL's device switching.
 
@@ -31,7 +31,7 @@ Your own files that you include with `.include "file"` belong on the **project d
 
 This version works with **one** file in the editor and without a project file. The source can include further files with `.include`; they are read from disk on every assembly.
 
-![An example project (jumprun) in the editor, full screen height.](../../screenshots/vc65-projekt-50.png)
+![An example project (prallball) in the editor, full screen height.](../../screenshots/vc65-projekt-50.png)
 
 ## Examples
 

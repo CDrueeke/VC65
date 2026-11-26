@@ -5,7 +5,7 @@
 Bild des Debuggers (Zeile 0 und 1) und der Speicher nach dem Lauf. Aufruf: tools/dbgtest.py"""
 import json, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import asmtest, idetest as I
+import asmtest, idetest as I, disptest as D
 
 ROOT = asmtest.ROOT
 PROG = """.org $2001
@@ -97,6 +97,15 @@ def main():
     title, st = state(n)
     ok = f"${addr[7]:04x}" in title and st and int(st[2], 16) == 0x33
     print("ok   " if ok else "DIFF ", "haltepunkt", title, st)
+    bad += 0 if ok else 1
+    # Regression (Befund nach 0.1.0-alpha): Sitzung bis Programmende mit zwei Haltepunkten, Text aendern, zweite Sitzung: keine Reste
+    UP = 0x91
+    ed = [UP] * 3 + D.pet(b"nop") + [0x0d]
+    n = I.run(PROG.encode(), [ASM] + [DOWN] * 3 + [BP] + [DOWN] * 3 + [BP, DBG, CONT, CONT, CONT] + ed + [ASM, DBG, STEP, STEP, STEP])
+    r = rows(n)
+    title, st = state(n)
+    ok = st and int(st[6], 16) < 0x3000 and "brk" not in " ".join(r[3:12])
+    print("ok   " if ok else "DIFF ", "reste nach programmende", title, st)
     bad += 0 if ok else 1
     # Notfalltaste: ein NMI (CIA-2-Zeitgeber) unterbricht eine Endlosschleife; der Debugger zeigt die unterbrochene Stelle
     path = os.path.join(ROOT, "build", "dbg_nmi.asm")

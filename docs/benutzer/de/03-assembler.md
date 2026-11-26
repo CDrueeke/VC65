@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: MIT-0 -->
 # 3 Assembler
 
-Englische Fassung: [../en/03-assembler.md](../en/03-assembler.md). Zurück zur [Übersicht](README.md). Vorabversion 0.1.0-Alpha.
+Englische Fassung: [../en/03-assembler.md](../en/03-assembler.md). Zurück zur [Übersicht](README.md). Vorabversion 0.1.1-Alpha.
 
 > **Hinweis:** Der Assembler ist im Emulator Xemu getestet (Vergleich Byte für Byte mit `vcc`, dem Assembler der Desktop-Fassung von VintageCoder). Am echten MEGA65 ist er ungeprüft.
 

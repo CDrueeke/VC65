@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: MIT-0 -->
 # 2 Editor
 
-German version: [../de/02-editor.md](../de/02-editor.md). Back to the [overview](README.md). Prerelease 0.1.0-Alpha.
+German version: [../de/02-editor.md](../de/02-editor.md). Back to the [overview](README.md). Prerelease 0.1.1-Alpha.
 
 > **Note:** All key codes are provisional. The editor is tested only in the Xemu emulator, unchecked on the real device. This applies especially to the HELP key (code `$84`), the menu and the 50-line screen.
 

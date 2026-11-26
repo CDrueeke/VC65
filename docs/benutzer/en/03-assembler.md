@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: MIT-0 -->
 # 3 Assembler
 
-German version: [../de/03-assembler.md](../de/03-assembler.md). Back to the [overview](README.md). Prerelease 0.1.0-Alpha.
+German version: [../de/03-assembler.md](../de/03-assembler.md). Back to the [overview](README.md). Prerelease 0.1.1-Alpha.
 
 > **Note:** The assembler is tested in the Xemu emulator (byte-for-byte comparison with `vcc`, the assembler of the VintageCoder desktop version). It is unchecked on a real MEGA65.
 

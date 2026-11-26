@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: MIT-0 -->
 # 10 Troubleshooting and frequently asked questions
 
-German version: [../de/10-fehlersuche.md](../de/10-fehlersuche.md). Back to the [overview](README.md). Prerelease 0.1.0-Alpha.
+German version: [../de/10-fehlersuche.md](../de/10-fehlersuche.md). Back to the [overview](README.md). Prerelease 0.1.1-Alpha.
 
 This chapter collects problems that can occur when working with VC65, with cause and remedy. The messages of the program are in English and appear here in code format. Everything is tested only in the Xemu emulator.
 

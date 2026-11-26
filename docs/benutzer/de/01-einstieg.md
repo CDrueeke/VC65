@@ -3,7 +3,7 @@
 
 Englische Fassung: [../en/01-getting-started.md](../en/01-getting-started.md). Zurück zur [Übersicht](README.md).
 
-Dieses Handbuch beschreibt die **Vorabversion 0.1.0-Alpha** von VC65. Sie ist noch nicht veröffentlicht. Vieles ist bisher nur im Emulator Xemu getestet; der Abschnitt [Stand und Grenzen](#stand-und-grenzen) nennt, was am echten Gerät noch nicht geprüft ist.
+Dieses Handbuch beschreibt die **Vorabversion 0.1.1-Alpha** von VC65. Vieles ist bisher nur im Emulator Xemu getestet; der Abschnitt [Stand und Grenzen](#stand-und-grenzen) nennt, was am echten Gerät noch nicht geprüft ist.
 
 ## Was ist VC65
 
@@ -70,7 +70,7 @@ Das Projektlaufwerk ist anfangs 8. **Strg+A** schaltet zwischen 8 und 9 um (Meld
 
 ## Stand und Grenzen
 
-**Vorabversion 0.1.0-Alpha, nicht veröffentlicht.** Alles in VC65 läuft im Emulator **Xemu** und besteht dort die Tests. Am **echten MEGA65 ist nichts davon vollständig geprüft**. Das Handbuch kennzeichnet die Punkte, die besonders offen sind, mit dem Hinweis „nur im Emulator Xemu getestet, am echten Gerät ungeprüft“:
+**Vorabversion 0.1.1-Alpha.** Alles in VC65 läuft im Emulator **Xemu** und besteht dort die Tests. Am **echten MEGA65 ist nichts davon vollständig geprüft**. Das Handbuch kennzeichnet die Punkte, die besonders offen sind, mit dem Hinweis „nur im Emulator Xemu getestet, am echten Gerät ungeprüft“:
 
 - die **HELP-Taste** (Tastencode `$84`) und damit das **Menü** mit allen Menüpunkten, ebenso die **ESC-Taste** und die Funktionstasten (VC65 schaltet die Funktionstasten-Belegung des KERNAL beim Start ab),
 - das **50-Zeilen-Bild** mit Kopfzeilen, Probleme-Leiste und Farben,

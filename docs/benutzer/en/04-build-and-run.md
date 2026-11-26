@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: MIT-0 -->
 # 4 Build and run
 
-German version: [../de/04-bauen-und-starten.md](../de/04-bauen-und-starten.md). Back to the [overview](README.md). Prerelease 0.1.0-Alpha.
+German version: [../de/04-bauen-und-starten.md](../de/04-bauen-und-starten.md). Back to the [overview](README.md). Prerelease 0.1.1-Alpha.
 
 > **Note:** Building, running and the emergency key are tested only in the Xemu emulator, unchecked on the real device. This applies especially to the automatic check, the 50-line screen and the RESTORE key.
 

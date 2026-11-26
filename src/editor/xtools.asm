@@ -512,6 +512,20 @@ xv_n:   inz
 xo_logo:
         jsr ed_view                 ; Editorbild und Rahmen neu zeichnen (loescht ein offenes Menue); das Logo kommt darueber
         jsr disp_show
+        lda #$02                    ; Textbereich abdunkeln (Zeilen 2 bis ed_rows-2: Zeichen bleiben, Farbe = COL_GUTTER ohne Auswahl-/Blinkbit),
+        sta lg_rr                   ; damit das Logo darueber lesbar bleibt; Befehlsleiste (0), Reiterleiste (1) und Statuszeile (letzte) bleiben
+lg_cl:  lda lg_rr
+        jsr ch_rowp                 ; ET+2 = Zeichenzeile, EA = Attribute
+        ldz #$4f                    ; 80 Spalten
+        lda #COL_GUTTER
+lg_cc:  sta [EA],z
+        dez
+        bpl lg_cc
+        inc lg_rr
+        ldx ed_rows
+        dex
+        cpx lg_rr
+        bne lg_cl
         lda ed_rows                 ; oberste Zeile des Logos = Bildmitte - 6
         lsr
         sec
@@ -624,6 +638,7 @@ lg_nd:  inc lg_r
         jsr ch_put
         jmp disp_getkey             ; auf eine Taste warten
 lg_top: .byte 0
+lg_rr:  .byte 0
 lg_r:   .byte 0
 lg_l:   .byte 0
 lg_b:   .byte 0
@@ -633,7 +648,7 @@ lg_tab: .byte 17, 17, 17, 17, 17, 10, 4            ; V
         .byte 14, 17, 16, 16, 16, 17, 14            ; C
         .byte 6, 8, 16, 30, 17, 17, 14              ; 6
         .byte 31, 16, 30, 1, 1, 17, 14              ; 5
-lg_s1:  .byte "VC65 0.1.0-alpha", 0
+lg_s1:  .byte "VC65 0.1.1-alpha", 0
 lg_s2:  .byte "Native development environment for the MEGA65", 0
 lg_s3:  .byte "Press any key", 0
 .else

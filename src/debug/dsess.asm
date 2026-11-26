@@ -122,7 +122,9 @@ ds_n7:  sec                         ; Aktion 6 (Speicher auf): Anzeigeadresse - 
         sbc #$00
         sta dbg_mem + 1
         jmp ds_ui
-ds_fin: jsr dv_end                  ; Programm regulaer beendet: VIC-Zustand der IDE zurueck
+ds_fin: jsr dbg_rem                 ; Programmende: noch eingefuegte BRK entfernen, Markierungen (Bit 7) loeschen; sonst bleiben sie in der
+                                    ; naechsten Sitzung stehen (kein BRK eingefuegt, altes Original wird in neuen Code geschrieben)
+        jsr dv_end                  ; Programm regulaer beendet: VIC-Zustand der IDE zurueck
         lda #$02
         sta dbg_state
         lda #$00

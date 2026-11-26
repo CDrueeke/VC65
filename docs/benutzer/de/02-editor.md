@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: MIT-0 -->
 # 2 Editor
 
-Englische Fassung: [../en/02-editor.md](../en/02-editor.md). Zurück zur [Übersicht](README.md). Vorabversion 0.1.0-Alpha.
+Englische Fassung: [../en/02-editor.md](../en/02-editor.md). Zurück zur [Übersicht](README.md). Vorabversion 0.1.1-Alpha.
 
 > **Hinweis:** Alle Tastencodes sind vorläufig. Der Editor ist nur im Emulator Xemu getestet, am echten Gerät ungeprüft. Das gilt besonders für die HELP-Taste (Code `$84`), das Menü und das 50-Zeilen-Bild.
 

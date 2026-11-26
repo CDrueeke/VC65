@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: MIT-0 -->
 # 10 Fehlersuche und häufige Fragen
 
-Englische Fassung: [../en/10-troubleshooting.md](../en/10-troubleshooting.md). Zurück zur [Übersicht](README.md). Vorabversion 0.1.0-Alpha.
+Englische Fassung: [../en/10-troubleshooting.md](../en/10-troubleshooting.md). Zurück zur [Übersicht](README.md). Vorabversion 0.1.1-Alpha.
 
 Dieses Kapitel sammelt Probleme, die beim Arbeiten mit VC65 auftreten können, mit Ursache und Abhilfe. Die Meldungen des Programms sind englisch und stehen hier in Code-Schreibweise. Alles ist nur im Emulator Xemu getestet.
 

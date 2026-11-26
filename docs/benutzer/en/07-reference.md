@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: MIT-0 -->
 # 7 Reference
 
-German version: [../de/07-referenz.md](../de/07-referenz.md). Back to the [overview](README.md). Prerelease 0.1.0-Alpha.
+German version: [../de/07-referenz.md](../de/07-referenz.md). Back to the [overview](README.md). Prerelease 0.1.1-Alpha.
 
 > **Note:** All key codes are provisional and unchecked on a real MEGA65; the HELP key (`$84`), ESC, the function keys (VC65 switches off the KERNAL function-key assignment at start) and the menu are tested only in the Xemu emulator.
 

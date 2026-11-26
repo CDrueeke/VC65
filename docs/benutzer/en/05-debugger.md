@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: MIT-0 -->
 # 5 Debugger
 
-German version: [../de/05-debugger.md](../de/05-debugger.md). Back to the [overview](README.md). Prerelease 0.1.0-Alpha.
+German version: [../de/05-debugger.md](../de/05-debugger.md). Back to the [overview](README.md). Prerelease 0.1.1-Alpha.
 
 > **Note:** The debugger is tested only in the Xemu emulator. The `BRK` and KERNAL paths, the keys, the screen switching and the emergency key are unchecked on the real device. The keys are provisional.
 

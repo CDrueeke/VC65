@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: MIT-0 -->
 # 7 Referenz
 
-Englische Fassung: [../en/07-reference.md](../en/07-reference.md). Zurück zur [Übersicht](README.md). Vorabversion 0.1.0-Alpha.
+Englische Fassung: [../en/07-reference.md](../en/07-reference.md). Zurück zur [Übersicht](README.md). Vorabversion 0.1.1-Alpha.
 
 > **Hinweis:** Alle Tastencodes sind vorläufig und am echten MEGA65 ungeprüft; die HELP-Taste (`$84`), ESC, die Funktionstasten (VC65 schaltet die Funktionstasten-Belegung des KERNAL beim Start ab) und das Menü sind nur im Emulator Xemu getestet.
 

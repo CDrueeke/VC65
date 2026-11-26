@@ -3,7 +3,7 @@
 
 German version: [../de/01-einstieg.md](../de/01-einstieg.md). Back to the [overview](README.md).
 
-This guide describes the **prerelease 0.1.0-Alpha** of VC65. It is not yet released. Much of it has so far only been tested in the Xemu emulator; the section [Status and limits](#status-and-limits) lists what is still unchecked on a real device.
+This guide describes the **prerelease 0.1.1-Alpha** of VC65. It is not yet released. Much of it has so far only been tested in the Xemu emulator; the section [Status and limits](#status-and-limits) lists what is still unchecked on a real device.
 
 ## What VC65 is
 
@@ -70,7 +70,7 @@ The project drive starts as 8. **Ctrl+A** switches between 8 and 9 (message `Pro
 
 ## Status and limits
 
-**Prerelease 0.1.0-Alpha, not released.** Everything in VC65 runs in the **Xemu** emulator and passes its tests there. **Nothing of it is completely checked on a real MEGA65.** The guide marks the points that are especially open with the note "tested only in the Xemu emulator, unchecked on the real device":
+**Prerelease 0.1.1-Alpha.** Everything in VC65 runs in the **Xemu** emulator and passes its tests there. **Nothing of it is completely checked on a real MEGA65.** The guide marks the points that are especially open with the note "tested only in the Xemu emulator, unchecked on the real device":
 
 - the **HELP key** (key code `$84`) and with it the **menu** and all menu entries, likewise the **ESC key** and the function keys (VC65 switches off the KERNAL function-key assignment at start),
 - the **50-line screen** with header lines, problems bar and colors,

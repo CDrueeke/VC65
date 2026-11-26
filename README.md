@@ -1,32 +1,41 @@
+<p align="center"><img src="branding/vc65-wortmarke.png" alt="VC65" width="360"></p>
+
 # VC65
 
-Native Entwicklungsumgebung für den MEGA65: Vollbild-Editor, VCASM-kompatibler Assembler, Bauen und Starten, Debugger, Projekte auf der SD-Karte. Läuft **auf dem MEGA65 selbst**, ohne PC.
+**Programmieren auf dem MEGA65, direkt auf dem MEGA65.** VC65 ist eine Entwicklungsumgebung, die auf dem Rechner selbst läuft, ohne PC: ein Vollbild-Editor, ein Assembler, Bauen und Starten mit einem Tastendruck und ein Debugger zum Schrittweise-Ausführen. Projekte liegen auf der SD-Karte.
 
-**Stand: Vorabversion 0.1.1-Alpha** (siehe [`docs/release/0.1.1-alpha.md`](docs/release/0.1.1-alpha.md)). Editor (80 × 50, Menü, Suchen/Ersetzen, Ausrichten, Marken), VCASM-kompatibler Assembler (übersetzt sich selbst byte-gleich zu `vcc`), Bauen und Starten, Debugger und Systembibliotheken von der Disk laufen **im Emulator Xemu**; am echten MEGA65 ist noch **nichts** geprüft (Handtestliste: [`docs/entwickler/de/handtest.md`](docs/entwickler/de/handtest.md)). Dieses Repository (`VC65-dev`, privat) ist aus dem Repository VintageCoder-dev ausgelöst worden. Das Repository `VC65` ist die öffentliche Fassung.
+![VC65: Editor mit Quelltext, Zeilennummern und Statuszeile](docs/screenshots/vc65-editor-50.png)
 
-**English:** pre-release 0.1.1-alpha. Native editor, VCASM-compatible assembler and debugger for the MEGA65 (no PC needed). Tested in the Xemu emulator only, nothing verified on a real MEGA65 yet. Manual: [`docs/benutzer/en`](docs/benutzer/en/README.md), release notes: [`docs/release/0.1.1-alpha.md`](docs/release/0.1.1-alpha.md).
+> **Vorabversion (Alpha).** VC65 wurde bisher **nur im Emulator Xemu** getestet, am echten MEGA65 noch nicht. Rückmeldungen vom echten Gerät sind willkommen.
 
-## Inhalt
-- `docs/konzept/Konzept-VC65.md`: Konzept mit Architektur, Bankplan („eine Rolle je Bank“), Etappen und allen Entscheidungen (Abschnitt 19), Repository und Kompatibilität (Abschnitt 20), Lizenz (Abschnitt 21).
-- `branding/`: Logo (Wortmarke „VC“ violett, „65“ weiß, gelber Punkt; Entwurf des Inhabers, SVG und PNG); als Verweis auf VC65 (Referenz) verwendbar, auch skaliert oder einfarbig, sonst nicht veränderbar (siehe `LICENSING.md`).
-- `docs/mockups/`: Bildentwürfe (80×50 und 80×25), erzeugt mit `docs/mockups/render.sh` (Python und Edge headless).
-- `docs/benutzer/`: Benutzerhandbuch (de/en, Kapitel 1–7).
-- `docs/release/`: Hinweise zu den Vorabversionen.
-- `examples/`: Beispiele für VC65 (hello, pal_demo, music_demo, prallball; MIT-0), fertig als Quelltext mit `.byte`-Includes.
-- `src/` (Quellen in VCASM), `tools/` (Bau und Tests, `tools/release.py` baut die Boot-D81), `sys/`, `tests/`.
-- `docs/entwickler/`: Entwicklerdokumentation (IDE, Editor, Assembler, Debugger, Handtest).
-- `CHANGELOG.md`, `LICENSING.md`, `LICENSE`, `LICENSES/`, `THIRD-PARTY-NOTICES.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`: wie bei VintageCoder.
+## Was VC65 kann
+- **Editor** (80 × 50 Zeichen): Farbhervorhebung, Zeilennummern, Auswahl, Kopieren und Einfügen, Rückgängig, Suchen und Ersetzen, Gehe zu Zeile, Marken, Ausrichten in Spalten, Hex-Rechner. Ein Menü erreichen Sie mit der HELP-Taste oder ESC.
+- **Assembler** für den 45GS02 des MEGA65 in der Sprache VCASM. Fehler erscheinen mit Code, Zeile und Spalte, fehlerhafte Zeilen sind rot markiert, und der Text wird bei jedem Zeilenwechsel im Hintergrund geprüft.
+- **Bauen und Starten:** übersetzen (Strg+E), Programm speichern (Strg+F), starten (Strg+R) und zurück in den Editor.
+- **Debugger:** Haltepunkte, Einzelschritt, Register, Speicher, Disassemblierung und eine Notfalltaste (RESTORE) für hängende Programme.
+- **Beispiele:** `hello`, `pal_demo`, `music_demo` und `prallball`, fertig als Quelltext zum Ausprobieren.
 
-## Entscheidungen (Kurzfassung)
-Name VC65 · Entwicklung in VCASM (Selbstübersetzung) · nur Vollbild-Editor · `.vcprj` der Desktop-Fassung lesen · Kompatibilitätsstufe 1 und 2 zum Start · Debugger zuerst mit Haltepunkten und Registern · 80×50 Standard, 80×25 nur als Editor · Deutsch und Englisch · eigene Release-Linie · Reset-Taste nach Absturz · eine Rolle je Bank, Quelltext im Attic.
+## Schnellstart
+1. Laden Sie unter [Releases](https://github.com/CDrueeke/VC65/releases) die Boot-Diskette `VC65-<Version>.d81` herunter (und, wenn Sie möchten, die Beispiel-Diskette). Die Prüfsummen stehen in `SHA256SUMS`.
+2. Binden Sie die Boot-Diskette als Laufwerk 8 ein, am MEGA65 über die SD-Karte oder im Emulator Xemu. Das ROM des MEGA65 gehört Dritten und gehört nicht zum Paket.
+3. Starten Sie in BASIC 65 mit `DLOAD "VC65"` und `RUN`.
+4. Die Beispiel-Diskette kommt in Laufwerk 9. Schalten Sie in VC65 mit Strg+A auf Laufwerk 9, laden Sie mit Strg+O ein Beispiel (zum Beispiel `hello`), übersetzen Sie es mit Strg+E und starten Sie es mit Strg+R.
 
-## Beziehung zu VintageCoder
-Eigenständig (keine laufende Abhängigkeit), aber dauerhaft möglichst kompatibel: gemeinsame Verträge (VCASM-Sprachversion, `.vcprj`-Versionsfeld, Konformitätsbeispiele), Abgleichsprüfung vor jedem Release. Einzelheiten im Konzept, Abschnitt 20.
+Das Programm VC65 selbst ist englisch; Handbuch und Webseite gibt es auf Deutsch und Englisch.
 
-**Vorgemerkt (2026-11-23, Entscheidung D5 in VintageCoder):** Medien-Includes zeigen künftig auf die Datei im Projekt (`.include "graphics/hero.vcsprite"`, im BASIC `#include`); der Assembler erkennt Medien an der Endung (`.vcsprite`, `.vcpmg`, `.vcchar`, `.vctiles`, `.vcscreen`, `.vcsong`, `.vcpal` …) und wandelt beim Bauen selbst um; alte Pfade `build/export/…` bleiben als Übergang gültig. VC65 unterstützt das später oder bewusst nicht; offene Frage an den Inhaber: Welche Rolle spielen Medien in VC65? Bis dahin wird nichts gebaut außer einer klaren Meldung: ein `.include`/`#include` mit Medien-Endung (`.vcsprite`, `.vcpmg`, `.vcchar`, `.vctiles`, `.vcscreen`, `.vcsong`, `.vcplay`, `.vcpal`) ergibt im VC65-Assembler den Fehler E219 („in VC65 noch nicht unterstützt“) statt „Datei nicht gefunden“. Die Sprachbeschreibung führt VintageCoder.
+## Dokumentation
+- **Handbuch** mit Anleitung „Ihr erstes Programm“, Tastenübersicht, Fehlercodes und Fehlersuche: [Deutsch](docs/benutzer/de/README.md) · [English](docs/benutzer/en/README.md). Als PDF finden Sie es bei jedem Release.
+- **Release-Hinweise:** [`docs/release/0.1.1-alpha.md`](docs/release/0.1.1-alpha.md) · **Änderungen:** [`CHANGELOG.md`](CHANGELOG.md)
+- **Entwicklerdokumentation** (Aufbau der IDE, Editor, Assembler, Debugger, Tests): [`docs/entwickler/`](docs/entwickler/)
 
-## Bekannte Grenzen (Auswahl)
-Nur Ziel `mega65`; Makros höchstens 16 Parameter (E900); Umlaute nur in Kommentaren und in Zeichenketten für `.text`/`.petscii`/`.byte` (Labels, Konstanten, Zeichenliterale und `.screencode` verhalten sich anders als bei `vcc`); keine Medien-Includes (E219); keine Ordner und langen Dateinamen auf der Disk. Vollständig: Handbuch Kapitel 3 und `docs/release/0.1.1-alpha.md`.
+## VintageCoder
+VC65 ist ein Schwesterprojekt von **[VintageCoder](https://github.com/CDrueeke/VintageCoder)**, der Entwicklungsumgebung für 8-Bit-Systeme auf dem PC ([Webseite](https://vintagecoder.drueeke.de/)). Beide sprechen dieselbe Assemblersprache **VCASM**, ein Programm lässt sich also in beiden entwickeln. VC65 ist die Fassung, die auf dem MEGA65 selbst läuft.
+
+## English
+**VC65** is a native development environment that runs on the MEGA65 itself, no PC needed: full-screen editor, assembler, build and run, and a debugger. It is a **pre-release (alpha), tested in the Xemu emulator only**; nothing is verified on a real MEGA65 yet. Download the boot disk from [Releases](https://github.com/CDrueeke/VC65/releases), mount it as drive 8 and start it with `DLOAD "VC65"` and `RUN` in BASIC 65. Manual: [docs/benutzer/en](docs/benutzer/en/README.md). VC65 is a sister project of [VintageCoder](https://github.com/CDrueeke/VintageCoder) and uses the same assembly language, VCASM.
+
+## Mitarbeit
+Hinweise und Fehlermeldungen sind willkommen, siehe [CONTRIBUTING.md](CONTRIBUTING.md) und [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md). Sicherheitsmeldungen: [SECURITY.md](SECURITY.md).
 
 ## Lizenz
-VC65 steht unter der **GNU General Public License, Version 3 oder später** ([LICENSE](LICENSE)), mit **denselben Zusagen wie VintageCoder**: Ausgaben, die Sprache VCASM und die Dateiformate sind frei nutzbar ([LICENSING.md](LICENSING.md)). Systemdateien, Vorlagen und Beispiele (sobald vorhanden) stehen unter MIT-0 ([LICENSES/MIT-0.txt](LICENSES/MIT-0.txt)). Die Software wird ohne jede Gewährleistung bereitgestellt. Fremdanteile: [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
+VC65 steht unter der **GNU General Public License, Version 3 oder später** ([LICENSE](LICENSE)). Was Sie mit VC65 erzeugen, die Sprache VCASM und die Dateiformate sind frei nutzbar ([LICENSING.md](LICENSING.md)). Systemdateien, Vorlagen und Beispiele stehen unter MIT-0 ([LICENSES/MIT-0.txt](LICENSES/MIT-0.txt)). Die Software wird ohne jede Gewährleistung bereitgestellt. Fremdanteile: [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md). Das Logo steht unter den Bedingungen in `LICENSING.md`.

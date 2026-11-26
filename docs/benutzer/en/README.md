@@ -3,7 +3,7 @@
 
 German version: [../de/README.md](../de/README.md). Both versions share the same chapter structure and the same content.
 
-**Status: prerelease 0.1.1-Alpha (not yet released).** VC65 is at the alpha stage. Everything has so far been tested in the Xemu emulator, none of it on a real MEGA65; the chapters mark what is especially open. Key assignments are provisional. Start with [chapter 1](01-getting-started.md), which also contains the section "Status and limits".
+**Status: prerelease 0.1.1-Alpha.** VC65 is at the alpha stage. Everything has so far been tested in the Xemu emulator, none of it on a real MEGA65; the chapters mark what is especially open. Key assignments are provisional. Start with [chapter 1](01-getting-started.md), which also contains the section "Status and limits".
 
 | Chapter | Contents | Status |
 |---|---|---|
